@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.panel-wrapper {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.panel-wrapper .panel {
+}
+
+.panel-wrapper .panel.year-wise {
+}
+
+.panel-wrapper .panel.fulldate-wise {
+}
