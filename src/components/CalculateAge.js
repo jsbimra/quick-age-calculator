@@ -16,7 +16,7 @@ const CalculateAge = (props) => {
   }
   return (
     <>
-      <section className="panel-wrapper">
+      <section className="panel-wrapper mt-5">
         <ul className="nav nav-tabs">
           <li className="nav-item">
             <a 
