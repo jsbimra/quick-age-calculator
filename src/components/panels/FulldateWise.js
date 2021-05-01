@@ -67,50 +67,51 @@ const PanelFulldateWise = (props) => {
   return (
     <>
       <section className="panel year-wise">
-        <form className="calculatorForm form-horizontal">
-          <div className="form-group">
-            <label className="form-label" htmlFor="dateRange">
-              Date:
-            </label>
-            <input
-              id="dateRange"
-              type="range"
-              min="1"
-              max="31"
-              step="1"
-              name="date"
-              defaultValue={fullDate.date}
-              onChange={(e) => handleChange(e)}
-              onMouseUp={(e) => calculateAge(fullDate)}
-              className="form-slider"
-            />
-          </div>
-          <div className="form-group">
-            {/* <select
-              className="form-select"
-              id="floatingSelect"
-              aria-label="Floating label select example"
-            >
-              <option>Select Month</option>
-              {monthOptions}
-            </select> */}
-            <label className="form-label" htmlFor="monthRange">
-              Month:
-            </label>
-            <input
-              id="monthRange"
-              type="range"
-              min="1"
-              max="12"
-              step="1"
-              className="slider"
-              name="month"
-              defaultValue={fullDate.month}
-              onChange={(e) => handleChange(e)}
-              onMouseUp={(e) => calculateAge(fullDate)}
-            />
-          </div>
-          <div className="form-group mb-3">
+        <form className="calculatorForm form form-horizontal">
+          <div className="row gutter-15">
+            <div className="col-sm-4 col-md-4 form-group">
+              <label className="form-label" htmlFor="dateRange">
+                Date:
+              </label>
+              <input
+                id="dateRange"
+                type="range"
+                min="1"
+                max="31"
+                step="1"
+                name="date"
+                defaultValue={fullDate.date}
+                onChange={(e) => handleChange(e)}
+                onMouseUp={(e) => calculateAge(fullDate)}
+                className="form-slider"
+              />
+            </div>
+            <div className="col-sm-4 col-md-4 form-group">
+              {/* <select
+                className="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option>Select Month</option>
+                {monthOptions}
+              </select> */}
+              <label className="form-label" htmlFor="monthRange">
+                Month:
+              </label>
+              <input
+                id="monthRange"
+                type="range"
+                min="1"
+                max="12"
+                step="1"
+                className="slider"
+                name="month"
+                defaultValue={fullDate.month}
+                onChange={(e) => handleChange(e)}
+                onMouseUp={(e) => calculateAge(fullDate)}
+              />
+            </div>
+            <div className="col-sm-4 col-md-4 form-group mb-3">
             <label className="form-label" htmlFor="yearRange">
               Year:
             </label>
@@ -138,26 +139,28 @@ const PanelFulldateWise = (props) => {
               minLength="4"
               onChange={(e) => calculateAge(e)}
             /> */}
-
-            <h4 className="mt-4">
-              Selected Date:{" "}
-              <strong>
-                {`${fullDate.date}/${fullDate.month}/${fullDate.year}`}
-              </strong>
-            </h4>
-
-            {calculatedAge !== null ? (
-              <h3 className="mt-2 pt-3">
-                <div dangerouslySetInnerHTML={{ __html: calculatedAge }} />
-              </h3>
-            ) : (
-              ""
-            )}
           </div>
+          </div>
+          
+          <div className="row">
+            <div className="col-md-12">
 
-          {/* <div className="form-group">
-            <input className="btn btn-secondary" type="submit" />
-          </div> */}
+                <h4 className="mt-4">
+                  Selected Date:{" "}
+                  <strong>
+                    {`${fullDate.date}-${fullDate.month}-${fullDate.year}`}
+                  </strong>
+                </h4>
+
+                {calculatedAge !== null ? (
+                  <h3 className="mt-2 pt-3">
+                    <div dangerouslySetInnerHTML={{ __html: calculatedAge }} />
+                  </h3>
+                ) : (
+                  ""
+                )}
+            </div>
+          </div>
         </form>
       </section>
     </>

@@ -23,11 +23,13 @@ const PanelYearWise = (props) => {
   return (
     <>
       <section className="panel year-wise">
-        <form className="calculatorForm form1-horizontal">
-          <div className="form-floating mb-3">
+        <form className="calculatorForm form form-horizontal">
+          <div className="form-group mt-2 mb-3">
+            <label className="form-label" 
+              htmlFor="birthYear">Enter your birth year:</label>
             <input
               type="number"
-              className="form-control"
+              className="form-control text-center w-50 m-auto"
               id="birthYear"
               name="birthYear"
               placeholder="Birth Year"
@@ -36,17 +38,19 @@ const PanelYearWise = (props) => {
               minLength="4"
               onChange={(e) => calculateAge(e)}
             />
-            <label htmlFor="birthYear">Enter Birth Year:</label>
-            {calculatedAge ? (
-              <h4 className="pt-3">
-                Age is <strong className="m-0 p-0">{calculatedAge}</strong> or{" "}
-                <strong className="m-0 p-0">{calculatedAge + 1}</strong> <br />
-                (If birth date is passed in this year!)
-              </h4>
-            ) : (
-              ""
-            )}
           </div>
+
+          {calculatedAge ? (
+            <h4 className="pt-1">
+              Your age is <strong className="m-0 p-0">{calculatedAge} years</strong>
+
+              <p  className="pt-3 d-inline-block">
+                <small>(if birth date is passed than you are </small> <strong className="d-inline m-0 p-0">{calculatedAge + 1} years old</strong>)
+              </p>
+            </h4>
+          ) : (
+            ""
+          )}
 
           {/* <div className="form-group">
             <input className="btn btn-secondary" type="submit" />
