@@ -8,7 +8,7 @@ const CalculateAge = (props) => {
   });
 
   const handlePanel = (e, type) => {
-    console.log('handelpanel', type);
+    // console.log('handelpanel', type);
     setWise({
       ...wise,
       year: type && type.toLowerCase() === 'year' ? true: false
@@ -37,8 +37,7 @@ const CalculateAge = (props) => {
           </li>
         </ul>
 
-          <div className="p-1 mt-2 mb-2
-            d-flex align-items-center">
+          <div className="d-flex align-items-center">
               {wise && wise.year ? 
                 <PanelYearWise /> : 
               <PanelFulldateWise />}

@@ -9,6 +9,11 @@
 }
 
 .panel-wrapper .panel {
+  width: 100%;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #dee2e6;
+  padding: 15px;
 }
 
 .panel-wrapper .panel.year-wise {

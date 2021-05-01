@@ -49,7 +49,7 @@ const PanelFulldateWise = (props) => {
       }
       console.log({ monthDiff, diffDate, calMonth, diffYear });
 
-      const calVal = `Age : <strong className="m-0 p-0">${diffYear} years ${calMonth} months ${diffDate} days </strong>
+      const calVal = `Age : <strong className="m-0 p-0 text-success">${diffYear} years ${calMonth} months ${diffDate} days </strong>
       `;
 
       if (Object.keys(calVal).length) {
@@ -69,7 +69,7 @@ const PanelFulldateWise = (props) => {
       <section className="panel year-wise">
         <form className="calculatorForm form form-horizontal">
           <div className="row gutter-15">
-            <div className="col-sm-4 col-md-4 form-group">
+            <div className="col-sm-5 col-md-4 form-group">
               <label className="form-label" htmlFor="dateRange">
                 Date:
               </label>
@@ -86,7 +86,7 @@ const PanelFulldateWise = (props) => {
                 className="form-slider"
               />
             </div>
-            <div className="col-sm-4 col-md-4 form-group">
+            <div className="col-sm-5 col-md-4 form-group">
               {/* <select
                 className="form-select"
                 id="floatingSelect"
@@ -111,7 +111,7 @@ const PanelFulldateWise = (props) => {
                 onMouseUp={(e) => calculateAge(fullDate)}
               />
             </div>
-            <div className="col-sm-4 col-md-4 form-group mb-3">
+            <div className="col-sm-5 col-md-4 form-group mb-3">
             <label className="form-label" htmlFor="yearRange">
               Year:
             </label>
@@ -144,10 +144,9 @@ const PanelFulldateWise = (props) => {
           
           <div className="row">
             <div className="col-md-12">
-
                 <h4 className="mt-4">
-                  Selected Date:{" "}
-                  <strong>
+                  <small>Selected Date:{" "}</small>
+                  <strong className="text-primary">
                     {`${fullDate.date}-${fullDate.month}-${fullDate.year}`}
                   </strong>
                 </h4>
